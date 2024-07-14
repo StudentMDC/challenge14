@@ -14,6 +14,17 @@
   border-radius: 10px;
   overflow: hidden;
 }
+@media (min-width:850px) {
+  .container {
+    max-width: 700px;
+    display: grid;
+    grid-template-areas: "community community community community community community"
+    "subscription subscription subscription whyus whyus whyus"
+    ;
+
+  }
+
+}
 body {
   font-family: "Karla", sans-serif;
   background-color: var(--Light-Gray);
@@ -29,6 +40,7 @@ body {
   gap: 20px;
 }
 .community {
+  grid-area: community;
   background-color: white;
 }
 .community h3 {
@@ -41,6 +53,7 @@ body {
   color: var(--Grayish-Blue);
 }
 .subscription {
+  grid-area: subscription;
   background-color: var(--Cyan);
 }
 .subscription h2 span {
@@ -59,7 +72,13 @@ body {
   font-size: 1em;
   border-radius: 10px;
 }
+.subscription button:hover {
+  color: var(--Bright-Yellow);
+  background-color: white;
+}
 .Whyus {
+  grid-area: whyus;
+
   background-color: var(--Grayish-Blue);
 }
 .Whyus p {
